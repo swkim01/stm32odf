@@ -1,0 +1,67 @@
+
+
+config LIB_DRIVERS_ENABLE
+	bool "Enable stm32 drivers component"
+	default n
+menu "STM32 DRIVERS configurations"
+	depends on LIB_DRIVERS_ENABLE
+
+	menu "GPIO"
+		config GPIO_DRIVER_MODULE_ENABLED
+		depends on HAL_GPIO_MODULE_ENABLED
+			bool "GPIO Driver Module"
+			default y
+	endmenu
+	menu "EXTI"
+		config EXTI_DRIVER_MODULE_ENABLED
+		depends on HAL_EXTI_MODULE_ENABLED
+			bool "EXTI Driver Module"
+			default y
+	endmenu
+	menu "I2C"
+		config I2C_DRIVER_MODULE_ENABLED
+		depends on HAL_I2C_MODULE_ENABLED
+		depends on GPIO_DRIVER_MODULE_ENABLED
+			bool "I2C Driver Module"
+			default n
+	endmenu
+	menu "SPI"
+		config SPI_DRIVER_MODULE_ENABLED
+		depends on HAL_SPI_MODULE_ENABLED
+		depends on GPIO_DRIVER_MODULE_ENABLED
+			bool "SPI Driver Module"
+			default n
+	endmenu
+	menu "CLCD"
+		config CLCD_DRIVER_MODULE_ENABLED
+		depends on HAL_I2C_MODULE_ENABLED
+			bool "CLCD Driver Module"
+			default n
+	endmenu
+	menu "ADC"
+		config ADC_DRIVER_MODULE_ENABLED
+		depends on HAL_ADC_MODULE_ENABLED
+			bool "ADC Driver Module"
+			default n
+	endmenu
+	menu "MPU6050"
+		config MPU6050_DRIVER_MODULE_ENABLED
+		depends on HAL_I2C_MODULE_ENABLED
+			bool "MPU6050 Driver Module"
+			default n
+	endmenu
+	menu "SSD1306"
+		config SSD1306_DRIVER_MODULE_ENABLED
+		depends on HAL_I2C_MODULE_ENABLED
+			bool "SSD1306 Driver Module"
+			default n
+	endmenu
+	menu "SSD1331"
+		config SSD1331_DRIVER_MODULE_ENABLED
+		depends on HAL_SPI_MODULE_ENABLED
+			bool "SSD1331 Driver Module"
+			default n
+	endmenu
+endmenu
+
+

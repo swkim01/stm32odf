@@ -1,0 +1,46 @@
+
+menu "Board config"
+
+	choice BOARD
+		bool "Select board"
+		default BOARD_NUCLEO_STM32F446RE
+		config BOARD_NUCLEO_STM32F446RE
+			depends on ARCH_STM32F4 && ARCH_STM32F446RE
+			bool "Select Nucleo STM32F446RE board"
+
+		config BOARD_NUCLEO_STM32F401RE
+			depends on ARCH_STM32F4 && ARCH_STM32F401RE
+			bool "Select Nucleo STM32F401RE board"
+
+		config BOARD_NUCLEO_STM32F429ZI
+			depends on ARCH_STM32F4 && ARCH_STM32F429ZI
+			bool "Select Nucleo STM32F429ZI board"
+
+		config BOARD_BLACKPILL_STM32F411CE
+			depends on ARCH_STM32F4 && ARCH_STM32F411CE
+			bool "Select BlackPill STM32F411CE board"
+
+		config BOARD_NUCLEO_STM32F103RB
+			depends on ARCH_STM32F1 && ARCH_STM32F103RB
+			bool "Select Nucleo STM32F103RB board"
+
+		config BOARD_BLUEPILL_STM32F103C8
+			depends on ARCH_STM32F1 && ARCH_STM32F103C8
+			bool "Select BluePill STM32F103C8 board"
+
+		config BOARD_BLUEPILL_STM32F103C6
+			depends on ARCH_STM32F1 && ARCH_STM32F103C6
+			bool "Select BluePill STM32F103C6 board"
+
+		config BOARD_BLUEPILL_STM32F103CB
+			depends on ARCH_STM32F1 && ARCH_STM32F103CB
+			bool "Select BluePill STM32F103CB board"
+
+	endchoice
+
+	config CLOCK_FREQ
+		int "clock(xclk) frequency"
+		default 180000000
+
+endmenu
+

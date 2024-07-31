@@ -1,0 +1,21 @@
+
+config LIB_FREERTOS_ENABLE
+        bool "Enable freertos component"
+        default n
+menu "FreeRTOS"
+    depends on LIB_FREERTOS_ENABLE
+
+    choice FREERTOS_INTERFACE_MODE
+        prompt "FreeRTOS Interface Mode"
+        default FREERTOS_NO_INTERFACE_MODE
+        help
+            FreeRTOS Interface Mode
+        config FREERTOS_NO_INTERFACE_MODE
+            bool "No Interface"
+        config FREERTOS_CMSIS_RTOS_V1
+            bool "CMSIS RTOS V1 Interface"
+        config FREERTOS_CMSIS_RTOS_V2
+            bool "CMSIS RTOS V2 Interface"
+    endchoice # FREERTOS_INTERFACE_MODE
+
+endmenu # FreeRTOS

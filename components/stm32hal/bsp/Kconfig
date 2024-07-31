@@ -1,0 +1,22 @@
+menu "Platform Selection"
+
+choice ARCH
+    prompt "Architecture"
+    default ARCH_STM32F4
+
+    config ARCH_STM32F4
+    bool "STM32F4"
+    help
+        Enable for STM32F4 systems
+
+    config ARCH_STM32F1
+    bool "STM32F1"
+    help
+        Enable for STM32F1 systems
+
+endchoice
+
+source "${SDK_PATH}/components/stm32hal/bsp/STM32F1xx/Kconfig"
+source "${SDK_PATH}/components/stm32hal/bsp/STM32F4xx/Kconfig"
+
+endmenu

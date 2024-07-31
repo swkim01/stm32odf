@@ -1,7 +1,7 @@
 STM32 Open Development Framework
 ===================
 
-[Korean](./README_KO.md)
+[Korean](./README_KR.md)
 
 This framework is based on [Neutree C CPP Framework](https://github.com/Neutree/c_cpp_project_framework) with [Kconfiglib](https://github.com/ulfalizer/Kconfiglib/) and provides **configurable** `C/C++` project/SDK template with `CMake` build system and `Kconfig` configuration for STMicroelectronics's MCUs.
 
@@ -97,8 +97,7 @@ stm32odf.py build
 # you can use --verbose arg to see more compile info, this is useful when error occurs
 # stm32odf.py build --verbose
 stm32odf.py clean
-tools/stm32odf.py distclean
-# stm32odf.py clean_conf
+stm32odf.py distclean
 ```
 
 * Here,

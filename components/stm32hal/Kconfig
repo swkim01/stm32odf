@@ -1,0 +1,79 @@
+
+
+config LIB_STM32HAL_ENABLE
+	bool "Enable stm32 hal component"
+	default y
+
+osource "${SDK_PATH}/components/stm32hal/bsp/Kconfig"
+
+menu "STM32 HAL configurations"
+	depends on LIB_STM32HAL_ENABLE
+
+	menu "UART"
+		config HAL_UART_MODULE_ENABLED
+			bool "HAL Uart Module"
+			default y
+	endmenu
+	menu "GPIO"
+		config HAL_GPIO_MODULE_ENABLED
+			bool "HAL GPIO Module"
+			default y
+	endmenu
+	menu "EXTI"
+		config HAL_EXTI_MODULE_ENABLED
+			bool "HAL EXTI Module"
+			default y
+	endmenu
+	menu "DMA"
+		config HAL_DMA_MODULE_ENABLED
+			bool "HAL DMA Module"
+			default y
+	endmenu
+	menu "RCC"
+		config HAL_RCC_MODULE_ENABLED
+			bool "HAL RCC Module"
+			default y
+	endmenu
+	menu "PWR"
+		config HAL_PWR_MODULE_ENABLED
+			bool "HAL PWR Module"
+			default y
+	endmenu
+	menu "FLASH"
+		config HAL_FLASH_MODULE_ENABLED
+			bool "HAL FLASH Module"
+			default y
+	endmenu
+	menu "CORTEX"
+		config HAL_CORTEX_MODULE_ENABLED
+			bool "HAL CORTEX Module"
+			default y
+	endmenu
+	menu "TIM"
+		config HAL_TIM_MODULE_ENABLED
+			bool "HAL TIM Module"
+			default y
+	endmenu
+	menu "ADC"
+		config HAL_ADC_MODULE_ENABLED
+			bool "HAL ADC Module"
+			default n
+	endmenu
+	menu "I2C"
+		config HAL_I2C_MODULE_ENABLED
+			bool "HAL I2C Module"
+			default n
+	endmenu
+	menu "SPI"
+		config HAL_SPI_MODULE_ENABLED
+			bool "HAL SPI Module"
+			default n
+	endmenu
+
+	config SDK_LOG_LEVEL
+		int "log level, 5:LOG_VERBOSE, 4:LOG_DEBUG, 3:LOG_INFO, 2:LOG_WARN, 1:LOG_ERROR, 0:LOG_NONE"
+		range 0 5
+		default 5
+endmenu
+
+
