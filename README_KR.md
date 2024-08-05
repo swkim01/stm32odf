@@ -21,12 +21,12 @@ STM32 개방형 개발 프레임워크
 
 * 다음 명령으로 ARM 프로세서를 위한 GCC 크로스 컴파일러, CMake, GNU Make, ninja-build, 및 python 을 설치한다:
 ```
-sudo apt install build-essential make cmake gcc-arm-none-eabi ninja-build python3 python-is-python3
+sudo apt install build-essential make cmake gcc-arm-none-eabi ninja-build python3 python-is-python3 git
 ```
 
 * 다음 명령으로 SDK 소스코드를 복사한다:
 ```
-git clone https://github.com/swkim01/stm32odf
+git clone https://github.com/swkim01/stm32odf.git
 ```
 
 * `~/.bashrc` 파일을 편집하여 SDK 소스 디렉토리 아래의 `tools` 디렉토리를 PATH 환경변수에 추가한다.
@@ -61,9 +61,9 @@ source ~/.bashrc
 * 다음 링크로부터 파이썬을 다운로드하고 설치 프로그램을 실행한 후에 `Add python.exe to PATH` 항목을 체크하여 `python.exe` 실행 경로를 PATH 환경변수에 추가하도록 설치한다:
 [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
-* CMD 쉘을 실행한 후에 다음 명령을 입력하여 `windows-curses` 패키지를 설치한다:
+* 파워쉘을 실행한 후에 다음 명령을 입력하여 `windows-curses` 패키지를 설치한다:
 ```
-cmd> pip install windows-curses
+pip install windows-curses
 ```
 
 * 다음 링크로부터 SDK 소스코드를 다운로드하고 압축을 푼다:
@@ -88,7 +88,7 @@ CONFIG_TOOLCHAIN_PATH="[arm-none-eabi-gcc 설치 디렉토리]"
 CONFIG_TOOLCHAIN_PREFIX="arm-none-eabi-"
 ```
 
-* `stm32odf.py` 스크립트를 사용하여 소프트웨어를 설정하고 펌웨어를 빌드한다.
+* `stm32odf.py` 스크립트를 사용하여 소프트웨어를 설정하고 펌웨어를 빌드한다. MS 윈도우에서는 cmd 쉘 대신 파워쉘을 사용한다.
 ```
 stm32odf.py menuconfig
 stm32odf.py build
@@ -160,7 +160,7 @@ CONFIG_TOOLCHAIN_PREFIX="arm-none-eabi-"
 
 * `SDK` 를 다운로드하고 `/home/linux/stm32odf` 과 같은 특정한 디렉토리에 둔다
 ```
-git clone https://github.com/swkim01/stm32odf
+git clone https://github.com/swkim01/stm32odf.git
 ```
 
 * 다음은 터미널에서 `export STM32ODF_PATH=/home/linux/stm32_odf`을 실행하여 환경변수를 export 한다. 아니면, `~/.bashrc` 또는 `~/.zshrc` 파일에 저장하여 터미널이 시작될 때마다 자동으로 추가되도록 한다.
@@ -230,5 +230,5 @@ see [LICENSE](./LICENSE)
 ## 다른 비슷한 소프트웨어
 
 * [ESP_IDF](https://github.com/espressif/esp-idf)：  `SDK` of `ESP32`, Written very well
-* * [nRF Connect SDK](https://github.com/nrfconnect/sdk-nrf): nRF Connect SDk by Nordic Semiconductors
+* [nRF Connect SDK](https://github.com/nrfconnect/sdk-nrf): nRF Connect SDk by Nordic Semiconductors
 

@@ -21,12 +21,12 @@ This framework currently supports ARM Cortex-M F1 and F4 device families.
 
 * Install GCC Cross compiler for ARM processor, CMake, GNU Make, ninja-build, and python all together by:
 ```
-sudo apt install build-essential make cmake gcc-arm-none-eabi ninja-build python3 python-is-python3
+sudo apt install build-essential make cmake gcc-arm-none-eabi ninja-build python3 python-is-python3 git
 ```
 
 * Clone code by:
 ```
-git clone https://github.com/swkim01/stm32odf
+git clone https://github.com/swkim01/stm32odf.git
 ```
 
 * Edit '~/.bashrc' file to add `tools` directory under the SDK source to PATH enviroment variable.
@@ -61,15 +61,13 @@ source ~/.bashrc
 * Install python, downloading from the next link, executing it and checking `Add python.exe to PATH` item to add`python.exe` path to PATH variable:
 [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
-* After executing CMD shell, then input the following command to install `windows-curses` package:
+* After executing PowerShell, then input the following command to install `windows-curses` package:
 ```
-cmd> pip install windows-curses
+pip install windows-curses
 ```
 
-* Clone code by:
-```
-git clone https://github.com/swkim01/stm32odf
-```
+* Install `SDK` source, downloading from the next link, unzipping the zip file:
+[https://github.com/swkim01/stm32odf/archive/refs/heads/main.zip](https://github.com/swkim01/stm32odf/archive/refs/heads/main.zip)
 
 * Add `tools` directory under the SDK source to PATH enviroment variable.
 
@@ -90,7 +88,7 @@ CONFIG_TOOLCHAIN_PATH="[arm-none-eabi-gcc installed directory]"
 CONFIG_TOOLCHAIN_PREFIX="arm-none-eabi-"
 ```
 
-* Configure the software and build by using `stm32odf.py` script.
+* Configure the software and build by using `stm32odf.py` script. On MS Window, use PowerShell instead of cmd shell.
 ```
 stm32odf.py menuconfig
 stm32odf.py build
@@ -163,7 +161,7 @@ To do this, only need:
 * Download `SDK` and put it in a directory, such as `/home/linux/stm32odf`
 
 ```
-git clone https://github.com/swkim01/stm32odf
+git clone https://github.com/swkim01/stm32odf.git
 ```
 
 * Then export the variable `export STM32ODF_PATH=/home/linux/stm32odf` in the terminal, which can be placed in the `~/.bashrc` or `~/.zshrc` file, so that this variable will be automatically added every time the terminal is started
