@@ -33,7 +33,7 @@ git clone https://github.com/swkim01/stm32odf.git
 ```
 nano ~/.bashrc
 ...
-PATH=$PATH:[stm32odf directory]/tools
+export PATH=$PATH:[stm32odf directory]/tools
 ```
 
 * `~/.bashrc` 스크립트 파일을 재실행한다:

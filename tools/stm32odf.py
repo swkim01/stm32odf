@@ -9,7 +9,7 @@
 
 import sys, os
 
-sdk_env_name = "SDK_PATH"
+sdk_env_name = "STM32ODF_PATH"
 
 # get SDK absolute path
 sdk_path = os.path.abspath(sys.path[0]+"/../")
