@@ -277,10 +277,12 @@ elif project_args.cmd == "flash":
     #flash_cmd = "-c \"program "+target_file+" verify reset\"" + " -c \"shutdown\""
     flash_cmd = "\"program "+target_file+" verify reset\""
     flash_shutdown = "\"shutdown\""
-    cmd = " ".join((flash_program, "-f", flash_interface, "-f", flash_cfgfile, "-c", flash_reset, "-c", flash_cmd, "-c", flash_shutdown))
-    print(cmd)
-    #res = subprocess.call([flash_program, "-f", flash_interface, "-f", flash_cfgfile, "-c", flash_reset, "-c", flash_cmd, "-c", flash_shutdown])
-    res = subprocess.call(cmd)
+    if sys.platform == "win32":
+        cmd = " ".join((flash_program, "-f", flash_interface, "-f", flash_cfgfile, "-c", flash_reset, "-c", flash_cmd, "-c", flash_shutdown))
+        print(cmd)
+        res = subprocess.call(cmd)
+    else:
+        res = subprocess.call([flash_program, "-f", flash_interface, "-f", flash_cfgfile, "-c", flash_reset, "-c", flash_cmd, "-c", flash_shutdown])
 
 # clean_conf
 elif project_args.cmd == "clean_conf":
