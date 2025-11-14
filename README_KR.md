@@ -223,9 +223,10 @@ see [LICENSE](./LICENSE)
 ## 이 프로젝트에 사용된 오픈 소스 프로젝트들
 
 * [Kconfiglib](https://github.com/ulfalizer/Kconfiglib)： `Kconfig`'s `Python` implementation
-* [STM32CubeF1](https://github.com/STMicroelectronics/STM32CubeF1)： `STMicroelectronics`'s SDK for STM32F4 MCUs
+* [STM32CubeF1](https://github.com/STMicroelectronics/STM32CubeF1)： `STMicroelectronics`'s SDK for STM32F1 MCUs
 * [STM32CubeF4](https://github.com/STMicroelectronics/STM32CubeF4)： `STMicroelectronics`'s SDK for STM32F4 MCUs
 * [FreeRTOS](https://github.com/FreeRTOS/FreeRTOS-Kernel): FreeRTOS 커널
+* [stm32-cmake](https://github.com/ObKo/stm32-cmake): stm32 cmake
 
 ## 다른 비슷한 소프트웨어
 

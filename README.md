@@ -226,9 +226,10 @@ see [LICENSE](./LICENSE)
 ## Open source projects used by this project
 
 * [Kconfiglib](https://github.com/ulfalizer/Kconfiglib)： `Kconfig`'s `Python` implementation
-* [STM32CubeF1](https://github.com/STMicroelectronics/STM32CubeF1)： `STMicroelectronics`'s SDK for STM32F4 MCUs
+* [STM32CubeF1](https://github.com/STMicroelectronics/STM32CubeF1)： `STMicroelectronics`'s SDK for STM32F1 MCUs
 * [STM32CubeF4](https://github.com/STMicroelectronics/STM32CubeF4)： `STMicroelectronics`'s SDK for STM32F4 MCUs
 * [FreeRTOS](https://github.com/FreeRTOS/FreeRTOS-Kernel): FreeRTOS Kernel
+* [stm32-cmake](https://github.com/ObKo/stm32-cmake): stm32 cmake
 
 ## Other Similar Reference
 
